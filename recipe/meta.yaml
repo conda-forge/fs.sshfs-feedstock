@@ -1,5 +1,7 @@
 {% set name = "fs.sshfs" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
+{% set sha256 = "d40808a32623f8120a613e48fda5a2c87189550bf8bd3869923673695248e5a4" %}
+
 
 package:
   name: {{ name }}
@@ -7,8 +9,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/46/3a/524e282d45936558012db7bf58616f90b278721d3cea3194e4d790f04610/fs.sshfs-0.7.1.tar.gz
-  sha256: 4669ea1a0b796bc035045570c9efa29fb3cbe9e284e6a177730df6dd08ded340
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 2
