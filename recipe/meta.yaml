@@ -1,6 +1,6 @@
 {% set name = "fs.sshfs" %}
-{% set version = "0.7.2" %}
-{% set sha256 = "d40808a32623f8120a613e48fda5a2c87189550bf8bd3869923673695248e5a4" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "051c6830fd2b593390d33f49d3a848768a9b8342a69d18470a9c883d4aae81a9" %}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
