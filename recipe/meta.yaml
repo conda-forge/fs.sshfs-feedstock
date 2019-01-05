@@ -1,6 +1,6 @@
 {% set name = "fs.sshfs" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "051c6830fd2b593390d33f49d3a848768a9b8342a69d18470a9c883d4aae81a9" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "6d0c16e906e2d1a349a9726356fbd0fb7d5f5dfeefeb79629d8291ecd6165254" %}
 
 
 package:
