@@ -1,6 +1,6 @@
 {% set name = "fs.sshfs" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "051c6830fd2b593390d33f49d3a848768a9b8342a69d18470a9c883d4aae81a9" %}
+{% set version = "0.10.1" %)
+{% set sha256 = "f22def2269433d356ea69daf59ace4e21d3deaa1a8a93d53fb75f4f22142692c" %)
 
 
 package:
@@ -23,9 +23,10 @@ requirements:
 
   run:
     - python
+    - cached-property >=1.5
     - six >=1.10.0,<2
     - paramiko >=2,<3
-    - fs >=2.0.7,<2.1
+    - fs >=2.2.0,<2.4.0
     - configparser  # [py2k]
 
 test:
