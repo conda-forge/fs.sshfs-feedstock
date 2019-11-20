@@ -3,7 +3,7 @@ About fs.sshfs
 
 Home: https://github.com/althonos/fs.sshfs
 
-Package license: LGPL v2.1
+Package license: LGPL-2.1
 
 Feedstock license: BSD 3-Clause
 
