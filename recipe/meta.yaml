@@ -1,35 +1,29 @@
-{% set name = "fs.sshfs" %}
-{% set version = "0.10.3" %}
-{% set sha256 = "e566f936d5f2c30338807dd9b1ae728223b22376d174f8e3a12a0469b40a405e" %}
+{% set version = "0.12.1" %}
 
 
 package:
-  name: {{ name }}
+  name: fs.sshfs
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
+  sha256: cb878c855a70e1e30be041845f20e79f30ca691fe842784b05262d5f6cdc2104
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv" 
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
-    - python
-    - setuptools
   host:
     - python
     - pip
   run:
     - python
-    - cached-property >=1.5
-    - six >=1.10.0,<2
-    - paramiko >=2,<3
-    - fs >=2.2.0,<2.4.0
+    - property-cached >=1.6,<1.7
     - configparser  # [py2k]
+    - fs >=2.4
+    - paramiko >=2,<3
+    - six >=1.10.0,<2
 
 test:
   imports:
@@ -37,7 +31,7 @@ test:
 
 about:
   home: https://github.com/althonos/fs.sshfs
-  license: LGPL v2.1
+  license: LGPL-2.1
   license_family: LGPL
   license_file: COPYING
   summary: 'Pyfilesystem2 over SSH using paramiko'
