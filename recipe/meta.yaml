@@ -1,4 +1,4 @@
-{% set version = "0.12.2" %}
+{% set version = "0.12.3" %}
 
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
-  sha256: 4f7599c9c1e93f8351f3891b3a6e508781357d4c4c9afa87220105adca130f85
+  sha256: 909a08988591a90bea467f06dfff6463c3ca203de68e50052f1518cbfa6809fa
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -34,10 +34,9 @@ about:
   license: LGPL-2.1-only
   license_family: LGPL
   license_file: COPYING
-  summary: 'Pyfilesystem2 over SSH using paramiko'
+  summary: Pyfilesystem2 over SSH using paramiko
   description: >
-    Once created, the SSHFS filesystem behaves like any other filesystem
-    see the Pyfilesystem2 documentation https://pyfilesystem2.readthedocs.io.
+    Once created, the SSHFS filesystem behaves like any other filesystem see the Pyfilesystem2 documentation https://pyfilesystem2.readthedocs.io.
 
 extra:
   recipe-maintainers:
