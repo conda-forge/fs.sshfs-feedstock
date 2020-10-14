@@ -10,17 +10,17 @@ source:
   sha256: 4f7599c9c1e93f8351f3891b3a6e508781357d4c4c9afa87220105adca130f85
 
 build:
-  number: 0
+  noarch: python
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - property-cached >=1.6,<1.7
-    - configparser  # [py2k]
     - fs >=2.4
     - paramiko >=2,<3
     - six >=1.10.0,<2
@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/althonos/fs.sshfs
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: COPYING
   summary: 'Pyfilesystem2 over SSH using paramiko'
