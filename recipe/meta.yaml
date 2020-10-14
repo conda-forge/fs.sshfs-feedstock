@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/althonos/fs.sshfs
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: COPYING
   summary: 'Pyfilesystem2 over SSH using paramiko'
