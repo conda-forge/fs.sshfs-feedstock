@@ -10,8 +10,8 @@ source:
   sha256: cf0c3675c325b4e988a093a4ad76b0eff37889ab57d6e1ea5788266875ac8278
 
 build:
+  number: 1
   noarch: python
-  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -41,3 +41,5 @@ about:
 extra:
   recipe-maintainers:
     - ReimarBauer
+    - althonos
+
