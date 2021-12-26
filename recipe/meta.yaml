@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 
 package:
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
-  sha256: cf0c3675c325b4e988a093a4ad76b0eff37889ab57d6e1ea5788266875ac8278
+  sha256: 05cb3dac1a932d5c4f44d1c2a43963ae5ff13450af1d6fb9ee6ce0139754ed1a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
