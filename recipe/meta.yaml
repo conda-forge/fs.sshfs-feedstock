@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
-  sha256: 05cb3dac1a932d5c4f44d1c2a43963ae5ff13450af1d6fb9ee6ce0139754ed1a
+  sha256: 9a6a8567abf8925cd41d06a13c4af6097b48d0d0776fc7785a482a0428b0fc19
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - python >=3
     - property-cached >=1.6,<1.7
     - fs >=2.4
-    - paramiko >=2,<3
+    - paramiko >=2,<4
     - six >=1.10.0,<2
 
 test:
