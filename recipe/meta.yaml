@@ -22,7 +22,7 @@ requirements:
     - python >=3
     - property-cached >=1.6,<1.7
     - fs >=2.4
-    - paramiko >=2,<3
+    - paramiko >=2,<4
     - six >=1.10.0,<2
 
 test:
