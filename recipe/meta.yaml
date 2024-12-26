@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/fs.sshfs/fs.sshfs-{{ version }}.tar.gz
   sha256: 9a6a8567abf8925cd41d06a13c4af6097b48d0d0776fc7785a482a0428b0fc19
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - property-cached >=1.6,<1.7
     - fs >=2.4
     - paramiko >=2,<4
     - six >=1.10.0,<2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fs.sshfs
 
